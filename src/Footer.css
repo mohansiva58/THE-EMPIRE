@@ -1,0 +1,194 @@
+
+.footer {
+  background-color:white;
+  color: black;
+  padding: 20px 0; /* Reduced padding */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+  
+ 
+  animation: fadeIn 1s ease-in-out; /* Added fade-in animation to footer */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px; /* Reduced gap */
+  padding-bottom: 10px; /* Reduced padding */
+  animation: fadeIn 1s ease-in-out; /* Added fade-in animation */
+}
+
+.footer-content h4 {
+  color: black;
+}
+
+.footer-section {
+  width: 25%; /* Reduced width */
+  min-width: 150px; /* Reduced minimum width */
+}
+
+.footer-section h4 {
+  font-size: 18px; /* Reduced font size */
+  margin-bottom: 10px; /* Reduced margin */
+  position: relative;
+  animation: fadeIn 1s ease-in-out; /* Added fade-in animation */
+}
+
+.footer-section h4::after {
+  content: "";
+  width: 40px; /* Reduced width */
+  height: 2px; /* Reduced height */
+  background-color: black;
+  display: block;
+  margin-top: 3px; /* Reduced margin */
+  animation: expandLine 0.6s ease-in-out; /* Added expandLine animation */
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 15px; /* Reduced font size */
+  line-height: 1.5; /* Reduced line height */
+  margin: 0;
+  color:black;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px; /* Reduced margin */
+}
+
+.footer-section ul li a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: black;
+}
+
+.footer-section p a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
+  color: black;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px; /* Reduced margin */
+  animation: fadeIn 1s ease-in-out; /* Added fade-in animation */
+}
+.icons h4{
+  padding-top: 6px;
+  padding-right: 20px;
+}
+.icons a {
+  color: black;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icons a:hover {
+  transform: scale(1.3);
+  color: black;
+}
+
+.footer-bottom {
+  background-color:white;
+  padding: 5px 0; /* Reduced padding */
+  margin-top: 20px; /* Reduced margin */
+  border-top: 1px solid #333;
+  font-size: 12px; /* Reduced font size */
+  animation: slideUp 0.8s ease-in-out; /* Added slideUp animation */
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+details {
+  margin-top: 8px; /* Reduced margin */
+  color: black;
+  padding-bottom: 0;
+  padding-left: 4px;
+}
+
+details[open] {
+  animation: dropDown 0.6s ease-in-out; /* Added dropDown animation */
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes expandLine {
+  from {
+      width: 0;
+  }
+  to {
+      width: 40px; /* Adjusted to match reduced size */
+  }
+}
+
+@keyframes slideUp {
+  from {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes dropDown {
+  from {
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+  }
+  to {
+      opacity: 1;
+      transform: scaleY(1);
+      transform-origin: top;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+  }
+
+  .footer-section {
+      width: 100%;
+      text-align: left;
+      padding: 0 20px;
+  }
+
+  .footer-bottom p {
+      font-size: 12px;
+  }
+}
